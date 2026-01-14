@@ -37,7 +37,7 @@ ItemSchema.methods.slugify = function() {
 ItemSchema.methods.updateFavoriteCount = function() {
   var item = this;
 
-  return User.count({ favorites: { $in: [item._id] } }).then(function(count) {
+  return User.countDocuments({ favorites: { $in: [item._id] } }).then(function(count) {
     item.favoritesCount = count;
 
     return item.save();

@@ -14,9 +14,14 @@ The Anythink Market backend is Node web app written with [Express](https://expre
 
 - `app.js` - The entry point to our application. This file defines our express server and connects it to MongoDB using mongoose. It also requires the routes and models we'll be using in the application.
 - `config/` - This folder contains configuration for passport as well as a central location for configuration/environment variables.
+<!-- This directory structure shows the backend organization of the Anythink-Market application.
+    The routes/ folder is a key component that defines all API endpoint definitions and 
+    request handlers for the backend service. -->
 - `routes/` - This folder contains the route definitions for our API.
 - `models/` - This folder contains the schema definitions for our Mongoose models.
 
 ## Error Handling
 
 In `routes/api/index.js`, we define a error-handling middleware for handling Mongoose's `ValidationError`. This middleware will respond with a 422 status code and format the response to have [error messages the clients can understand](https://github.com/gothinkster/realworld/blob/master/API.md#errors-and-status-codes)
+
+
